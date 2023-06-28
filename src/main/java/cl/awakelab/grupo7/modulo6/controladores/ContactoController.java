@@ -1,4 +1,4 @@
-package cl.awakelab.grupo7.modulo6.controllers;
+package cl.awakelab.grupo7.modulo6.controladores;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
