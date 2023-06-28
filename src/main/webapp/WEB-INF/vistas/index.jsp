@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,27 +11,20 @@
 <meta name="author" content="Grupo 7">
 
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+
 <!--Google fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link
-	href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&amp;display=swap"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&amp;display=swap" rel="stylesheet">
 
-<!-- Bootstrap 5.1.3 -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-	crossorigin="anonymous">
-<!--iconos-->
+<link rel="stylesheet" href="<core:url value="/res/css/estilo.css" />">
+
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-	integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-	crossorigin="anonymous">
+	>
 
-<!--Mi estilo-->
-<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 	<header id="inicio" class="hero-section">

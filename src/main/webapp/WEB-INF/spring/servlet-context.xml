@@ -19,7 +19,7 @@
                        Por ejemplo: <link rel="stylesheet" href="/res/css/estilo.css">
             - location: Dónde se encuentran los recursos de la aplicación
     -->
-    <resources mapping="/res/**" location="/recursos/" />
+    <resources mapping="/res/**" location="/resources/" />
 
     <!-- Resuelve las vistas seleccionadas por @Controllers -->
     <beans:bean id="viewResolver"
