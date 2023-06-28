@@ -20,7 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
  *
  */
 @Controller
-public class CrearCapacitacionController {
+public class RiskAssesmentController {
 	
 	
 	@GetMapping({ "/crearCapacitacion" })
