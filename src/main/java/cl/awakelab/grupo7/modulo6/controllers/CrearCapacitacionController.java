@@ -8,6 +8,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 
+/**
+ * Ejercicio Grupal 3 Modulo 6 
+ * Grupo 7
+ * 
+ * Integrantes:
+ * 	Felipe Toro
+ * 	Lino Cortes
+ * 	Pedro Urbina
+ * 	Sergio Morales
+ *
+ */
 @Controller
 public class CrearCapacitacionController {
 	
@@ -26,14 +37,4 @@ public class CrearCapacitacionController {
 	public String getIndex(Model model) {
 		return "index";
 	}
-	
-//	@RequestMapping(path="/contacto", method = RequestMethod.GET)
-//	public ModelAndView mostrarIndex() {
-//	    return new ModelAndView("index");
-//	}
-//	
-//	@RequestMapping(path="/", method = RequestMethod.GET)
-//	public ModelAndView mostrarIndex() {
-//	    return new ModelAndView("index");
-//	}
 }
