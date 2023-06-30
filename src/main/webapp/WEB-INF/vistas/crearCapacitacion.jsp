@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,8 +34,8 @@
 		<div class="card bg-dark text-white col-md-7 mx-auto"
 			style="border-radius: 1rem; margin-bottom: 110px;">
 			<div class="card-body p-5">
-				<form id="login-form" action="ServletCrearCapacitacion"
-					method="post">
+				<form id="login-form" action="${pageContext.request.contextPath}/crearCapacitacion"
+				 modelAttribute="capacitacion" method="post">
 					<div class="mb-3">
 						<label for="capacitacionId" class="form-label">Identificador</label>
 						<input id="identificador" placeholder="Numérico"
@@ -46,16 +47,13 @@
 							id="duracion" name="duracion" type="number">
 					</div>
 					<div class="mb-3">
-						<label for="cantidadAsistentes" class="form-label">Cantidad
-							asistentes</label> <input type="number" placeholder="Numérico"
-							class="form-control" id="cantidadAsistentes"
-							name="cantidadAsistentes">
+						<label for="cantidadAsistentes" class="form-label">Cantidad asistentes</label> 
+						<input type="number" placeholder="Numérico" class="form-control" id="cantidadAsistentes" name="cantidadAsistentes">
 					</div>
-					<div class="mb-3">
-						<label for="rut_cliente" class="form-label">Rut Cliente</label> <input
-							type="text"
-							placeholder="Numérico sin puntos, guión ni dv, <99999999"
-							class="form-control" id="rutCliente" name="rutCliente">
+					<div class="mb-3 form-group">
+						<label for="rut_cliente" class="form-label">Rut Cliente</label> 
+						<input
+							type="text" class="form-control" id="lugar" name="rutCliente">
 					</div>
 					<div class="mb-3">
 						<label for="tematica" class="form-label">Tematica</label> <input
