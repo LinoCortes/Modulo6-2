@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,18 +55,20 @@
 									</tr>
 								</thead>
 								<tbody class="table-group-divider">
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
-
+									<c:forEach var="s" items="${capacitaciones}">
+										<tr>
+											<td><c:out value="${s.getId()}"></c:out></td>
+											<td><c:out value="${s.getIdentificador()}"></c:out></td>
+											<td><c:out value="${s.getDuracion()}"></c:out></td>
+											<td><c:out value="${s.getCantidadAsistentes()}"></c:out></td>
+											<td><c:out value="${s.getRutCliente()}"></c:out></td>
+											<td><c:out value="${s.getTematica()}"></c:out></td>
+											<td><c:out value="${s.getDia()}"></c:out></td>
+											<td><c:out value="${s.getHora()}"></c:out></td>
+											<td><c:out value="${s.getLugar()}"></c:out></td>
+										</tr>
+										<!-- fin del for de java -->
+									</c:forEach>
 								</tbody>
 							</table>
 						</div>
