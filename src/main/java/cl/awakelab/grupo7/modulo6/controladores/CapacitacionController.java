@@ -6,15 +6,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-
-import cl.awakelab.grupo7.modulo6.dao.CapacitacionDao;
 import cl.awakelab.grupo7.modulo6.modelo.Capacitacion;
+import cl.awakelab.grupo7.modulo6.servicios.CapacitacionService;
 
 @Controller
 public class CapacitacionController {
 	
 	@Autowired
-	CapacitacionDao capacitacionDAO;
+	CapacitacionService capacitacionService;
 	
 	@RequestMapping(value="/crearCapacitacion", method = RequestMethod.GET)
 	public ModelAndView mostrarCrearCapacitacion() {
@@ -30,6 +29,7 @@ public class CapacitacionController {
 	@RequestMapping(value="/listarCapacitacion", method = RequestMethod.GET)
 	public ModelAndView mostrarListarCapacitaciones() {
 		
-		return new ModelAndView("listarCapacitacion", "capacitaciones", capacitacionDAO.obtenerCapacitaciones());
+		
+		return new ModelAndView("listarCapacitacion", "capacitaciones", capacitacionService.getAll());
 	}
 }
