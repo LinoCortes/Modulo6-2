@@ -26,7 +26,6 @@ public class Capacitacion implements Serializable{
 		    this.hora = hora;		      
     }
 	
-	
 	public int getId() {
 		return id;
 	}
@@ -35,7 +34,6 @@ public class Capacitacion implements Serializable{
 		this.id = id;
 	}
 
-	//se crean los setters.
 	public void setIdentificador(int identificador) {
 		this.identificador=identificador;	
 	} 
@@ -61,8 +59,6 @@ public class Capacitacion implements Serializable{
 	public void setTematica(String tematica) {
 		this.tematica = tematica;
 	}
-	
-	//se crean los getters
 	
 	public String getRutCliente() {
 		return rutCliente;
