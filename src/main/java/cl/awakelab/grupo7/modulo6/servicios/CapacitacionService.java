@@ -1,6 +1,6 @@
 package cl.awakelab.grupo7.modulo6.servicios;
 
-import java.util.ArrayList;
+import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,5 +17,10 @@ public class CapacitacionService {
 	
 	public List<Capacitacion> getAll(){
 		return capacitacionDAOImpl.obtenerCapacitaciones();
-	} 
+	}
+
+	public boolean createCapacitacion() throws SQLException {
+		Capacitacion capacitacion = new Capacitacion();
+		return capacitacionDAOImpl.crearCapacitaciones(capacitacion);
+	}
 }
