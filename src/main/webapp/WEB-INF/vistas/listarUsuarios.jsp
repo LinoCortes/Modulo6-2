@@ -59,16 +59,16 @@
 					</div>
 					<div class="col-6 offset-3">
 						<jsp:include page="tablas/tablaAdministrativo.jsp" />
+						<jsp:include page="tablas/tablaProfesional.jsp" />
+						<jsp:include page="tablas/tablaCliente.jsp" />
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<jsp:include page="resources/footer.jsp" />
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
 		crossorigin="anonymous"></script>
-	<script src="js/listarUsuarios.js"></script>
 </body>
 </html>
