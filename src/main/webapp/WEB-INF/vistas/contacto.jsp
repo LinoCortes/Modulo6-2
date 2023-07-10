@@ -25,23 +25,18 @@
 		<div class="col-xs-12 col-sm-12 col-md-4 mx-auto">
 			<div class="card bg-dark text-white" style="border-radius: 1rem;">
 				<div class="card-body p-5">
-					<form class="fondo-form" action="ServletContacto" method="post">
+					<form class="fondo-form" action="${pageContext.request.contextPath}/contacto" modelAttribute="contacto" method="post">
 						<div class="mb-3">
-							<label for="name" class="form-label">Nombre</label> <input
-								type="text" class="form-control" id="name" name="name" required />
-						</div>
-
-						<div class="mb-3">
-							<label for="email" class="form-label">Email</label> <input
-								type="email" class="form-control" id="email" name="email"
-								required />
-
+							<label for="name" class="form-label">Nombre</label>
+							<input type="text" class="form-control" id="name" name="nombre" required />
 						</div>
 						<div class="mb-3">
-							<label for="email" class="form-label">Mensaje</label>
-							<textarea class="form-control" id="message" name="message"
-								rows="4" required></textarea>
-
+							<label for="email" class="form-label">Email</label>
+							<input type="email" class="form-control" id="email" name="email" required />
+						</div>
+						<div class="mb-3">
+							<label for="mensaje" class="form-label">Mensaje</label>
+							<textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
 						</div>
 						<div class="d-grid gap-2 pb-4 pt-4">
 							<button type="submit" class="btn btn-primary">Enviar</button>
