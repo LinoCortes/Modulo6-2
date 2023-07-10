@@ -8,5 +8,5 @@ import cl.awakelab.grupo7.modulo6.modelo.Capacitacion;
 public interface ICapacitacionDao {
 	List<Capacitacion> obtenerCapacitaciones();
 	  
-	Boolean crearCapacitaciones(Capacitacion capacitacion) throws SQLException;
+	Boolean crearCapacitacion(Capacitacion capacitacion) throws SQLException;
 }

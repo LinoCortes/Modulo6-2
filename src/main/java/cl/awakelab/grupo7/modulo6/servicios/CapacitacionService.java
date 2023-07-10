@@ -19,8 +19,7 @@ public class CapacitacionService {
 		return capacitacionDAOImpl.obtenerCapacitaciones();
 	}
 
-	public boolean createCapacitacion() throws SQLException {
-		Capacitacion capacitacion = new Capacitacion();
-		return capacitacionDAOImpl.crearCapacitaciones(capacitacion);
+	public boolean createCapacitacion(Capacitacion capacitacion) throws SQLException {
+		return capacitacionDAOImpl.crearCapacitacion(capacitacion);
 	}
 }

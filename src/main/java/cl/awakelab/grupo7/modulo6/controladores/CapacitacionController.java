@@ -9,6 +9,8 @@ import org.springframework.web.servlet.ModelAndView;
 import cl.awakelab.grupo7.modulo6.modelo.Capacitacion;
 import cl.awakelab.grupo7.modulo6.servicios.CapacitacionService;
 
+import java.sql.SQLException;
+
 @Controller
 public class CapacitacionController {
 	
@@ -21,15 +23,13 @@ public class CapacitacionController {
 	}
 	
 	@RequestMapping(value="/crearCapacitacion", method = RequestMethod.POST)
-	public String crearCapacitacion(@ModelAttribute("capacitacion") Capacitacion capacitacion) {
-		System.out.println(capacitacion.toString());
-	    return "redirect:/listarCapacitacion"; // Rediriges al usuario a la lista de capacitaciones
+	public String crearCapacitacion(@ModelAttribute("capacitacion") Capacitacion capacitacion) throws SQLException {
+		capacitacionService.createCapacitacion(capacitacion);
+		return "redirect:/listarCapacitacion";
 	}
 	
 	@RequestMapping(value="/listarCapacitacion", method = RequestMethod.GET)
 	public ModelAndView mostrarListarCapacitaciones() {
-		
-		
 		return new ModelAndView("listarCapacitacion", "capacitaciones", capacitacionService.getAll());
 	}
 }

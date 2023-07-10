@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -27,10 +28,15 @@ public class CapacitacionDAOImpl implements ICapacitacionDao {
 	}
 
 	@Override
-	public Boolean crearCapacitaciones(Capacitacion capacitacion) throws SQLException {
-		String sql = "Insert into  capacitaciones (identificador,duracion,cantidadAsistentes,tematica,rutCliente,dia,hora,lugar) values (?.?.?.?.?.?.?.?)";
-		template.update(sql, capacitacion.getIdentificador(),capacitacion.getDuracion(),capacitacion.getCantidadAsistentes(),capacitacion.getTematica(),capacitacion.getRutCliente(),capacitacion.getDia(),capacitacion.getHora(),capacitacion.getLugar());
-		return true;
+	public Boolean crearCapacitacion(Capacitacion capacitacion) throws SQLException {
+		String sql = "Insert into  capacitaciones (identificador,duracion,cantidadAsistentes,tematica,rutCliente,dia,hora,lugar) values (?,?,?,?,?,?,?,?);";
+		try {
+			template.update(sql, capacitacion.getIdentificador(),capacitacion.getDuracion(),capacitacion.getCantidadAsistentes(),capacitacion.getTematica(),capacitacion.getRutCliente(),capacitacion.getDia(),capacitacion.getHora(),capacitacion.getLugar());
+			return true;
+		} catch (DataAccessException e) {
+			System.out.println(e);
+		}
+		return null;
 	}
 	
 	class CapacitacionRowMapper implements RowMapper<Capacitacion>{

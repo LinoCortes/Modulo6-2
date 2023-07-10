@@ -38,7 +38,7 @@
 			<div class="card-body p-5">
 				<h2 class="text-center mb-4"></h2>
 				<div class="row">
-					<div class="col-6 offset-3">
+					<div class="col">
 						<div class="table-responsive-xl">
 							<table class="table">
 								<thead>
@@ -47,8 +47,8 @@
 										<th scope="col">Identificador</th>
 										<th scope="col">Duracion</th>
 										<th scope="col">Asistentes</th>
-										<th scope="col">Rut</th>
 										<th scope="col">Tematica</th>
+										<th scope="col">Rut Cliente</th>
 										<th scope="col">Dia</th>
 										<th scope="col">Hora</th>
 										<th scope="col">Lugar</th>
