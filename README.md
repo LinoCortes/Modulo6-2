@@ -1,4 +1,4 @@
-Ejercicio grupal 7 Módulo 6
+Ejercicio grupal 5.1 Módulo 6
 Grupo 7 
 Integrantes: 
   Lino Cortés
@@ -6,4 +6,6 @@ Integrantes:
   Sergio Morales
   Felipe Toro
 
-Se desarrollan los Controladores para las vistas Contacto, Crear Capacitación e Index. De momento no hay conexión a la BBDD
+- Se implementa el caso de uso para crear capacitaciones
+- Se implementa el caso de uso para contacto (imprimiendo en consola los resultados del formulario)
+- Se implementa el caso de uso para listar usuarios
