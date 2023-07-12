@@ -24,9 +24,8 @@ public class AdministrativoDAOImpl implements IAdministrativoDao {
 	@Override 
 	public List<Administrativo> obtenerAdministrativos(){
 		String sql = "SELECT usuario.id, usuario.nombre, usuario.run, usuario.fecha_nacimiento, administrativo.area, administrativo.exp_previa\r\n"
-				+ "FROM administrativo\r\n" + "INNER JOIN usuario ON usuario.id=administrativo.id_usuario;";
+				+ "FROM administrativo INNER JOIN usuario ON usuario.id=administrativo.id_usuario;";
 		return template.query(sql, new AdministrativoRowMapper());
-		
 	}
 	
 	class AdministrativoRowMapper implements RowMapper<Administrativo>{

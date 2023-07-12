@@ -21,9 +21,9 @@
 			<td><c:out value="${s.getId()}"></c:out></td>
 			<td><c:out value="${s.getNombre()}"></c:out></td>
 			<td><c:out value="${s.getRun()}"></c:out></td>
-			<td><c:out value="${s.getfechaNacimiento()}"></c:out></td>
+			<td><c:out value="${s.getFechaNacimiento()}"></c:out></td>
 			<td><c:out value="${s.getArea()}"></c:out></td>
-			<td><c:out value="${s.getExpPrevia()}"></c:out></td>
+			<td><c:out value="${s.getExperienciaPrevia()}"></c:out></td>
 			
 		 </tr>
 	   </c:forEach>  

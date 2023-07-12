@@ -12,34 +12,28 @@ import cl.awakelab.grupo7.modulo6.servicios.ProfesionalService;
 
 @Controller
 public class UsuariosController {
-	
-	
-	
+
 	@Autowired
 	AdministrativoService administrativoService;
-    
-	@RequestMapping(value="/listarUsuarios", method = RequestMethod.GET)
-    public ModelAndView mostrarListarAdministrativos(){
-        return new ModelAndView("listarUsuarios", "administrativos", administrativoService.getAll());
-    }
-    
-    
-    @Autowired
-    ProfesionalService profesionalService;
-    
-    @RequestMapping(value="/listarUsuarios", method = RequestMethod.GET)
-    public ModelAndView mostrarListarProfesionales(){
-        return new ModelAndView("listarUsuarios", "profesionales", profesionalService.getAll());
-    }
-    
-    @Autowired
-    ClienteService	clienteService;
-    
-    @RequestMapping(value="/listarUsuarios", method = RequestMethod.GET)
-    public ModelAndView mostrarListarClientes(){
-        return new ModelAndView("listarUsuarios", "clientes", clienteService.getAll());
-    }
-    
-    
-    
+//	@Autowired
+//	ClienteService clienteService;
+//	@Autowired
+//	ProfesionalService profesionalService;
+	
+	@RequestMapping(value = "/listarUsuarios", method = RequestMethod.GET)
+	public ModelAndView mostrarListarAdministrativos() {
+		return new ModelAndView("listarUsuarios", "administrativos", administrativoService.getAll());
+	}
+
+
+//	@RequestMapping(value = "/listarUsuarios", method = RequestMethod.GET)
+//	public ModelAndView mostrarListarProfesionales() {
+//		return new ModelAndView("listarUsuarios", "profesionales", profesionalService.getAll());
+//	}
+//
+//	@RequestMapping(value = "/listarUsuarios", method = RequestMethod.GET)
+//	public ModelAndView mostrarListarClientes() {
+//		return new ModelAndView("listarUsuarios", "clientes", clienteService.getAll());
+//	}
+
 }
