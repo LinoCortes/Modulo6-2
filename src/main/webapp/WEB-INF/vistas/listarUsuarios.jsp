@@ -1,5 +1,5 @@
 <%@page import="java.util.List"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,12 +11,6 @@
 <meta name="author" content="Grupo 7">
 
 
-<!--Google fonts-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link
-	href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&amp;display=swap"
-	rel="stylesheet">
 
 <!-- Bootstrap 5.1.3 -->
 <link
@@ -24,18 +18,10 @@
 	rel="stylesheet"
 	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
 	crossorigin="anonymous">
-<!--iconos-->
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-	integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-	crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-	integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-	crossorigin="anonymous">
 
-<!--Mi estilo-->
-<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+<link rel="stylesheet" href="<core:url value="/res/css/estilo.css" />">
 </head>
 <body class="hero-section-login">
 	<div>
@@ -66,6 +52,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="<c:url value="/res/js/listarUsuarios.js" />"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

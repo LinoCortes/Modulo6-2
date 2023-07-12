@@ -1,14 +1,45 @@
 package cl.awakelab.grupo7.modulo6.controladores;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import cl.awakelab.grupo7.modulo6.servicios.AdministrativoService;
+import cl.awakelab.grupo7.modulo6.servicios.ClienteService;
+import cl.awakelab.grupo7.modulo6.servicios.ProfesionalService;
+
 @Controller
 public class UsuariosController {
-    @RequestMapping(value="/listarUsuarios", method = RequestMethod.GET)
-    public ModelAndView mostrarListarUsuarios(){
-        return new ModelAndView("listarUsuarios");
+	
+	
+	
+	@Autowired
+	AdministrativoService administrativoService;
+    
+	@RequestMapping(value="/listarUsuarios", method = RequestMethod.GET)
+    public ModelAndView mostrarListarAdministrativos(){
+        return new ModelAndView("listarUsuarios", "administrativos", administrativoService.getAll());
     }
+    
+    
+    @Autowired
+    ProfesionalService profesionalService;
+    
+    @RequestMapping(value="/listarUsuarios", method = RequestMethod.GET)
+    public ModelAndView mostrarListarProfesionales(){
+        return new ModelAndView("listarUsuarios", "profesionales", profesionalService.getAll());
+    }
+    
+    @Autowired
+    ClienteService	clienteService;
+    
+    @RequestMapping(value="/listarUsuarios", method = RequestMethod.GET)
+    public ModelAndView mostrarListarClientes(){
+        return new ModelAndView("listarUsuarios", "clientes", clienteService.getAll());
+    }
+    
+    
+    
 }
