@@ -28,8 +28,8 @@
 				<td><c:out value="${s.getRun()}"></c:out></td>
 				<td><c:out value="${s.getEdad()}"></c:out></td>
 				<td><c:out value="${s.getRut()}"></c:out></td>
-				<td><c:out value="${s.getfechaNacimiento()}"></c:out></td>
-				<td><c:out value="${s.getApellido()}"></c:out></td>
+				<td><c:out value="${s.getFechaNacimiento()}"></c:out></td>
+				<td><c:out value="${s.getApellidos()}"></c:out></td>
 				<td><c:out value="${s.getTelefono()}"></c:out></td>
 				<td><c:out value="${s.getAfp()}"></c:out></td>
 				<td><c:out value="${s.getDireccion()}"></c:out></td>

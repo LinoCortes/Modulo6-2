@@ -15,14 +15,19 @@ public class UsuariosController {
 
 	@Autowired
 	AdministrativoService administrativoService;
-//	@Autowired
-//	ClienteService clienteService;
-//	@Autowired
-//	ProfesionalService profesionalService;
+	@Autowired
+	ClienteService clienteService;
+	@Autowired
+	ProfesionalService profesionalService;
 	
 	@RequestMapping(value = "/listarUsuarios", method = RequestMethod.GET)
 	public ModelAndView mostrarListarAdministrativos() {
-		return new ModelAndView("listarUsuarios", "administrativos", administrativoService.getAll());
+		System.out.println("Esto es una prueba en el controlador");
+		ModelAndView model = new ModelAndView("listarUsuarios");
+		model.addObject("administrativos",administrativoService.getAll());
+		model.addObject("profesionales", profesionalService.getAll());
+		model.addObject("clientes",clienteService.getAll());
+		return model;
 	}
 
 
