@@ -22,7 +22,6 @@ public class UsuariosController {
 	
 	@RequestMapping(value = "/listarUsuarios", method = RequestMethod.GET)
 	public ModelAndView mostrarListarAdministrativos() {
-		System.out.println("Esto es una prueba en el controlador");
 		ModelAndView model = new ModelAndView("listarUsuarios");
 		model.addObject("administrativos",administrativoService.getAll());
 		model.addObject("profesionales", profesionalService.getAll());

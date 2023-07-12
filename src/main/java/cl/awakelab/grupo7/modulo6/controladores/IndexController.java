@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 /**
- * Ejercicio Grupal 5 Modulo 6 
+ * Ejercicio Grupal 5.1 Modulo 6 
  * Grupo 7
  * 
  * Integrantes:
